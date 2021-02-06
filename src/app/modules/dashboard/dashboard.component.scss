@@ -1,0 +1,35 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+.stats-cards {
+  .mat-card {
+    overflow: hidden;
+    height:200px;
+  }
+}
+
+table {
+  width: 100%;
+}
+p {
+font-family: Lato;
+line-height: 5px;
+}
+.label_heading{
+font-family: sans-serif;
+font-weight:bold;
+color:blue;
+padding-bottom:60px;
+}
+.sub_heading{
+padding-top:60px;
+}
+.rounded_box{
+border-radius: 35px;
+background-color: #948e8e;
+
+}
+.rounded_box p{
+text-align:center;
+}
+
+
+
