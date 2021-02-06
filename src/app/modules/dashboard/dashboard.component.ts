@@ -2,23 +2,36 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { DashboardService } from '../dashboard.service';
 import { MatTableDataSource } from '@angular/material/table';
 export interface PeriodicElement {
-  name: string;
   position: number;
-  weight: number;
-  symbol: string;
+  Purchased_on: string;
+  Material: string;
+  Plant: string;
+  Postage_date: string;
+  Quantity: number;
+  Stock_category: string;
+  Rate: number;
+  Currency: string;
+  Value: number;
+  Vendor: number;
+
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  { position:1, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:2, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:3, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:4, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:5, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:6, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:7, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:8, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:9, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:10, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:11, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:12, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+  { position:13, Purchased_on: '12 Dec 2015' ,Material: 'T-shirt',Plant: 'AC3012',Postage_date: '13 Dec 2015',Quantity: 3,Stock_category: 'AQC1',Rate: 1312,Currency: 'AUD',Value: 4550,Vendor: 123408},
+
+
 ];
 
 @Component({
@@ -33,7 +46,7 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(private dashboardService: DashboardService) { }
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = [ 'position','Purchased_on','Material','Plant','Postage_date','Quantity','Stock_category','Rate','Currency','Value', 'Vendor'];
   dataSource = ELEMENT_DATA;
   ngOnInit() {
     this.bigChart = this.dashboardService.bigChart();

@@ -14,22 +14,80 @@ font-family: Lato;
 line-height: 5px;
 }
 .label_heading{
-font-family: sans-serif;
-font-weight:bold;
-color:blue;
+font-family: Arial, sans-serif;
+font-weight:bolder;
+color:#6262de;
+padding-bottom:60px;
+}
+.label_heading_public_relation{
+font-family: Arial, sans-serif;
+font-weight:bolder;
+color:#de62cf;
+padding-bottom:60px;
+}
+.label_heading_email_market{
+font-family: Arial, sans-serif;
+font-weight:bolder;
+color:#22ff33;
+padding-bottom:60px;
+}
+.label_heading_website_traffic{
+font-family: Arial, sans-serif;
+font-weight:bolder;
+color:#2fffe3;
 padding-bottom:60px;
 }
 .sub_heading{
 padding-top:60px;
+color:#d1d1de;
+font-family: Arial, sans-serif;
 }
 .rounded_box{
 border-radius: 35px;
 background-color: #948e8e;
+text-align: center;
+margin-top: 18px;
+height: 20px;
+color: #ff5722;
 
 }
-.rounded_box p{
-text-align:center;
+.rounded_box_a{
+border-radius: 35px;
+background-color: #948e8e;
+text-align: center;
+margin-top: 6px;
+height: 20px;
+color: #22ff33;
+}
+
+.text_css_value{
+font-size: 15px;
+color: white;
+padding-bottom: 5px;
 }
 
 
+mat-card{
+background:#3b3c3e;
+}
+.border_line {
+ border-bottom: 5px solid #ff5722 ;
+ padding-bottom: 10px;
+ font-size:20px;
+ font-weight: 700;
+ color:white;
+}
 
+.mat-divider {
+    border-top-color:rgb(119 119 119) ;
+}
+.mat-header-cell{
+  color:rgb(119 119 119)  ;
+}
+.mat-cell{
+color:white;
+}
+.table-container {
+  max-height: 265px;
+  overflow: auto;
+}

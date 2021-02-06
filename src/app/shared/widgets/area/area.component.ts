@@ -17,26 +17,31 @@ export class AreaComponent implements OnInit {
 
   ngOnInit() {
     this.chartOptions = {
+   chart: {
+        backgroundColor: '#3b3c3e',
 
+    },
     title: {
-        text: 'Daily Sales'
-    },
+        text: 'Daily Sales',
+        style: {
+         color: 'white',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
 
-    subtitle: {
-        text: 'Source: thesolarfoundation.com'
     },
-
+     xAxis:{
+             accessibility: {
+            rangeDescription: 'Range: 1 to 10'
+        }
+            },
     yAxis: {
         title: {
-            text: 'Time'
-        }
-    },
+          text: 'Time'
+        },
+    tickAmount: 8,
+        },
 
-    xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 0 to 10'
-        }
-    },
+
 
     legend: {
         layout: 'vertical',
@@ -68,7 +73,10 @@ export class AreaComponent implements OnInit {
                 legend: {
                     layout: 'horizontal',
                     align: 'center',
-                    verticalAlign: 'bottom'
+                    verticalAlign: 'top',
+                     itemStyle:{
+                 color: 'white'
+              }
                 }
             }
         }]

@@ -17,22 +17,29 @@ export class BarComponent implements OnInit {
   ngOnInit() {
     this.chartOptions = {
     chart: {
-        type: 'bar'
+        type: 'bar',
+        backgroundColor: '#3b3c3e'
     },
     title: {
-        text: 'Stacked bar chart'
+        text: 'Monthly Sales(In Millions)',
+         style: {
+         color: 'white',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
     },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        categories: ['200', '100', '50', '30', '20']
     },
     yAxis: {
         min: 0,
-        title: {
-            text: 'Total fruit consumption'
-        }
+
     },
     legend: {
-        reversed: true
+        align: 'right',
+        verticalAlign: 'top',
+         itemStyle:{
+                 color: 'white'
+              }
     },
     plotOptions: {
         series: {
@@ -40,14 +47,13 @@ export class BarComponent implements OnInit {
         }
     },
     series: [{
-        name: 'John',
-        data: [5, 3, 4, 7, 2]
+        name: 'Profit',
+        data: [2, 2, 2, 2, 1],
+        color: '#ebe834',
     }, {
-        name: 'Jane',
-        data: [2, 2, 3, 2, 1]
-    }, {
-        name: 'Joe',
-        data: [3, 4, 4, 2, 5]
+        name: 'Sales',
+        data: [6, 4, 3, 2, 3],
+        color: '#22ff33',
     }]
 };
 }
